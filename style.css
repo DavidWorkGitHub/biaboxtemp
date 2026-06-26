@@ -2851,3 +2851,32 @@ body.dark-mode .contact-action-list a:hover{
     padding:34px 22px;
   }
 }
+
+
+/* v27: final image reliability fixes */
+img{
+  max-width:100%;
+}
+
+.team-photo,
+.boxes-media-grid img,
+.gallery-grid img,
+.insta-grid img,
+.image-hero img,
+.hero-photo img,
+.wide-img{
+  background:#fffdf6;
+}
+
+.logo-track img,
+.sponsor-grid article img{
+  background:#fffdf6 !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+
+.brand img,
+.footer-logo img{
+  background:#fff8d8 !important;
+  object-fit:cover !important;
+}
