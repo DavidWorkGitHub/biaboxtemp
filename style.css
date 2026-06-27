@@ -2880,3 +2880,246 @@ img{
   background:#fff8d8 !important;
   object-fit:cover !important;
 }
+
+
+/* v29: centered nav, contact page redesign, Facebook */
+.site-header{
+  display:grid !important;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:24px;
+}
+
+.nav-links{
+  justify-content:center !important;
+}
+
+.header-actions{
+  justify-content:flex-end;
+}
+
+.register-interest-btn{
+  background:var(--green) !important;
+  color:#fff !important;
+  border-color:var(--green) !important;
+  box-shadow:0 12px 28px rgba(7,131,63,.18);
+}
+
+.register-interest-btn:hover{
+  transform:translateY(-3px);
+}
+
+.contact-modern-page{
+  position:relative;
+  overflow:hidden;
+}
+
+.contact-modern-page::before,
+.contact-modern-page::after{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:500px;
+  opacity:.11;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 30% 20%, transparent 18px, #07833f 19px, transparent 20px),
+    radial-gradient(circle at 70% 40%, transparent 22px, #07833f 23px, transparent 24px),
+    radial-gradient(circle at 35% 80%, transparent 35px, #07833f 36px, transparent 37px);
+}
+
+.contact-modern-page::before{left:-90px;top:150px}
+.contact-modern-page::after{right:-90px;top:160px}
+
+.contact-modern-hero{
+  width:min(900px,90%);
+  margin:90px auto 50px;
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+
+.contact-modern-hero h1{
+  font-size:clamp(70px,9vw,125px);
+  color:var(--dark-green);
+  letter-spacing:1px;
+}
+
+.leaf-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  color:var(--green);
+  margin:12px 0 22px;
+}
+
+.leaf-divider span{
+  width:72px;
+  height:2px;
+  background:var(--green);
+  display:block;
+}
+
+.contact-modern-hero p{
+  font-size:19px;
+  line-height:1.6;
+  max-width:760px;
+  margin:0 auto;
+}
+
+.contact-modern-cards{
+  width:min(1180px,90%);
+  margin:55px auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  position:relative;
+  z-index:1;
+}
+
+.contact-modern-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:30px;
+  padding:36px 28px;
+  text-align:center;
+  text-decoration:none;
+  color:var(--ink);
+  box-shadow:0 14px 45px rgba(0,0,0,.06);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.contact-modern-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--green);
+  box-shadow:0 28px 65px rgba(7,63,34,.16);
+}
+
+.contact-icon{
+  width:76px;
+  height:76px;
+  border-radius:50%;
+  background:var(--green);
+  display:grid;
+  place-items:center;
+  margin:0 auto 24px;
+  box-shadow:0 14px 30px rgba(7,131,63,.2);
+}
+
+.contact-icon img{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+}
+
+.contact-modern-card h2{
+  color:var(--dark-green);
+  font-size:46px;
+  margin-bottom:14px;
+}
+
+.contact-modern-card strong{
+  display:block;
+  margin-bottom:18px;
+  color:var(--ink);
+}
+
+.contact-modern-card p{
+  line-height:1.55;
+  color:var(--muted);
+}
+
+.contact-register-strip{
+  width:min(1180px,90%);
+  margin:70px auto 110px;
+  background:#edf7e9;
+  border:1px solid #d7e6ce;
+  border-radius:28px;
+  padding:26px 34px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:24px;
+  align-items:center;
+  position:relative;
+  z-index:1;
+}
+
+.contact-register-icon{
+  width:74px;
+  height:74px;
+  border-radius:50%;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  font-size:36px;
+  box-shadow:0 14px 30px rgba(0,0,0,.12);
+}
+
+.contact-register-strip h2{
+  font-size:42px;
+  color:var(--green);
+}
+
+.contact-register-strip p{
+  margin:0;
+}
+
+body.dark-mode .contact-modern-hero h1,
+body.dark-mode .contact-modern-card h2{
+  color:#f4fff8;
+}
+
+body.dark-mode .contact-modern-card{
+  background:#101c16;
+  border-color:#294236;
+}
+
+body.dark-mode .contact-modern-card strong{
+  color:#f4fff8;
+}
+
+body.dark-mode .contact-register-strip{
+  background:#10261b;
+  border-color:#294236;
+}
+
+body.dark-mode .contact-register-strip h2{
+  color:#20d878;
+}
+
+.socials img{
+  width:22px;
+  height:22px;
+  object-fit:contain;
+}
+
+@media(max-width:1100px){
+  .contact-modern-cards{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:760px){
+  .site-header{grid-template-columns:auto 1fr}
+  .nav-links{grid-column:1 / -1;justify-content:flex-start !important}
+  .header-actions{grid-column:1 / -1;justify-content:flex-start}
+  .contact-modern-cards,.contact-register-strip{grid-template-columns:1fr}
+  .contact-register-strip{text-align:center}
+  .contact-register-icon{margin:auto}
+}
+
+
+/* v30: restore Order Now header button and footer Facebook */
+.header-btn{
+  white-space:nowrap;
+}
+
+body.dark-mode .header-btn{
+  color:#f4fff8;
+}
+
+.socials img{
+  width:22px;
+  height:22px;
+  object-fit:contain;
+  display:block;
+}
