@@ -3123,3 +3123,23 @@ body.dark-mode .header-btn{
   object-fit:contain;
   display:block;
 }
+
+
+/* v31: final nav order */
+.site-header{
+  display:grid !important;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:24px;
+}
+
+.nav-links{
+  justify-content:center !important;
+}
+
+.header-actions{
+  justify-content:flex-end;
+}
+
+/* v32 image reliability */
+img{max-width:100%}.team-photo,.boxes-media-grid img,.gallery-grid img,.insta-grid img,.image-hero img,.hero-photo img,.wide-img{background:#fffdf6}.logo-track img,.sponsor-grid article img{background:#fffdf6!important;object-fit:contain!important;display:block!important}.brand img,.footer-logo img{background:#fff8d8!important;object-fit:cover!important}
